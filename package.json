@@ -1,0 +1,20 @@
+{
+  "name": "web_algorithm_framework",
+  "version": "1.0.0",
+  "description": "An algorithm framework for use with web (html) elements.",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrickgonz/WebAlgorithmFramework.git"
+  },
+  "author": "Patrick Gonzalez patrickgonz@gmail.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/patrickgonz/WebAlgorithmFramework/issues"
+  },
+  "homepage": "https://github.com/patrickgonz/WebAlgorithmFramework#readme",
+  "type": "module"
+}
