@@ -1,5 +1,5 @@
 /**
- * IntComparator - compares to numeric strings
+ * IntComparator - compares two numeric strings
  * @class
  */
 import Comparator from './comparator.js';
@@ -35,6 +35,9 @@ export default class IntComparator extends Comparator{
     // Compare strings
     if(referenceInt === compareInt)
       result = 0; // Return equal
+    // Handle null strings
+    else if(Number.isNaN(referenceInt) & Number.isNaN(compareInt))
+      result = 0; // Treat as the same
     else if(referenceInt > compareInt | Number.isNaN(compareInt))
       result = 1; // Return greater than
 
