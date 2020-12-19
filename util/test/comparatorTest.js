@@ -3,28 +3,39 @@
  */
 
 import Comparator from '../comparator.js';
+import chai from 'chai';
+let expect = chai.expect;
 
-class ComparatorTest extends Comparator{
-  constructor(){
-    super();
-  }
-}
+describe('Comparator', function(){
+  describe('compare()', function(){
 
-try{
-  let test1 = new ComparatorTest();
+    describe('from concrete class that has not unimplemented method', function(){
+      it('should throw error', function(){
+        class ComparatorTest extends Comparator{
+          constructor(){
+            super();
+          }
+        }
+        let test = new ComparatorTest();
 
-  let stringA = "astring";
-  let stringB = "bstring";
+        let stringA = "astring";
+        let stringB = "bstring";
 
-  test1.compare(stringA, stringB); //Fails: unimplemented method.
-}
-catch(error){
-  console.error(error);
-}
+        expect(function(){
+          test.compare(stringA, stringB);
+        }).to.throw(TypeError, 'You have to implement the method compare!')
+      })
+    })
 
-try{
-  let test2 = new Comparator(); //Fails: cannot instantiate abstract class.
-}
-catch(error){
-  console.error(error);
-}
+  })
+
+  describe('constructor()', function(){
+    describe('try to instantiate', function(){
+      it('should throw error', function(){
+        expect(function(){
+          let test = new Comparator();
+        }).to.throw(TypeError, 'Abstract Comparator class cannot be instantiated.')
+      })
+    })
+  })
+})
