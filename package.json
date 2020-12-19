@@ -4,17 +4,20 @@
   "description": "An algorithm framework for use with web (html) elements.",
   "main": " ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/patrickgonz/WebAlgorithmFramework.git"
   },
   "author": "Patrick Gonzalez patrickgonz@gmail.com",
-  "license": "UNLICENSED",
+  "license": "MIT License",
   "bugs": {
     "url": "https://github.com/patrickgonz/WebAlgorithmFramework/issues"
   },
   "homepage": "https://github.com/patrickgonz/WebAlgorithmFramework#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
 }
