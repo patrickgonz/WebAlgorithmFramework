@@ -33,12 +33,12 @@ export default class FloatComparator extends Comparator{
     }
 
     // Compare strings
-    if(referenceInt === compareInt)
+    if (referenceInt === compareInt)
       result = 0; // Return equal
     // Handle null strings
-    else if(Number.isNaN(referenceInt) & Number.isNaN(compareInt))
+    else if (Number.isNaN(referenceInt) & Number.isNaN(compareInt))
       result = 0; // Treat as the same
-    else if(referenceInt > compareInt | Number.isNaN(compareInt))
+    else if (referenceInt > compareInt | Number.isNaN(compareInt))
       result = 1; // Return greater than
 
     return result;
