@@ -13,8 +13,7 @@ describe('TableRowRetriever', function(){
 
     describe("Pass a null object", function(){
       it("should throw TypeError", function(){
-        JSDOM.fromFile("tableRowRetrieverTest.hmtl").then(testDom => {
-          //let obj = testDom.window.document.getElementById("main");
+         JSDOM.fromFile("tableRowRetrieverTest.hmtl").then(testDom => {
           let obj = null;
 
           expect(retriever.retrieve(obj)).to.throw(TypeError, 'Object is not of type HTMLTableElement')
